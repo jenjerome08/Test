@@ -1,0 +1,160 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block content %}
+
+<div style="margin-top: 50px;" class="container">
+	<div class = "row">
+
+		<div class = "col">
+			<div class = "col-md">
+				<div class = "card text-center text-white mb-3" id = "total-orders">
+					<div class = "card-header">
+						<h5 class = "card-title">Total Musician</h5>
+					</div>
+					<div class = "card-body">
+						<h3 class = "card-title">{{total_musician}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "col">
+			<div class="col-md">
+				<div class="card text-center text-white mb-3" id = "total-delivered">
+					<div class = "card-header">
+						<h5 class = "card-title">Album</h5>
+					</div>
+					<div class = "card-body">
+						<h3 class = "card-title">{{total_album}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "col">
+			<div class="col-md">
+				<div class="card text-center text-white mb-3" id = "total-pending">
+					<div class = "card-header">
+						<h5 class = "card-title">Contract Accepted</h5>
+					</div>
+					<div class = "card-body">
+						<h3 class = "card-title">{{accepted}}</h3>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "col">
+			<div class="col-md">
+				<div class="card text-center text-white mb-3" id = "total-pending">
+					<div class = "card-header">
+						<h5 class = "card-title">Contract Pending</h5>
+					</div>
+					<div class = "card-body">
+						<h3 class = "card-title">{{pending}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="container bg-dark">
+    <div class="row">
+
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 text-info">Musicians</h5>
+					<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+						<input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+					  </form>
+                    <a href="{% url 'createMusicianPage' %}" class="btn btn-info">Create Musician</a>
+                    
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark table mx-auto d-bloc">
+						
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Payment method</th>
+                                <th scope="col">Created Date</th>
+                                <th class="text-end">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+								{% for musician in musicians %}
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ musician.profile_picture.url }}" class="avatar sm rounded-pill me-3 flex-shrink-0" alt="Customer">
+                                        <div>
+                                            <div class="h6 mb-0 lh-1 text-white">{{musician.pen_name}}</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-white">{{musician.email}}</td>
+                                <td> <span class="d-inline-block align-middle text-white">{{musician.phone}}</span></td>
+                                <td><span class="text-white">{{musician.phone}}</span></td>
+                                <td class="text-white">{{musician.date_created}}</td>
+                                <td class="text-end">
+                                    <div class="drodown">
+                                        <a data-bs-toggle="dropdown" href="#" class="btn p-1 " aria-expanded="false">
+                                  <i class="fa fa-bars text-white" aria-hidden="true"></i>
+                                </a>
+                                        <div class="dropdown-menu dropdown-menu-end" style="">
+                                            <a href="{% url 'profilePage' musician.id %}" class="dropdown-item">View Details</a>
+                                            <a href="{% url 'updateMusician' musician.id %}" class="dropdown-item">Edit Musician</a>
+                                            <a href="{% url 'deleteMusician' musician.id %}" class="dropdown-item">Delete Musician</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+							{% endfor %}
+                        </tbody>
+                    </table>
+        </div>
+    </div>
+</div>
+	<div class="container bg-dark py-5">
+		<div class="main-body">
+		<div class="row mb-4">
+		  <div class="col-lg-5">
+			<h2 class="display-4 font-weight-light text-white">Musician Profile</h2>
+			<p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		  </div>
+		</div>
+		<div class="row text-center mx-auto">
+			{% for musician in musicians %}
+				<div class="col-xl-3 col-sm-6 mb-5">
+					<div class="bg-white rounded shadow-sm py-5 px-4">
+						<img src="{{ musician.profile_picture.url }}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+						<h5 class="mb-0">{{ musician.pen_name }}</h5>
+						<span class="small text-uppercase text-muted">
+							<ul class="social mb-0 list-inline mt-3">
+								{% for group in musician.group.all %}
+									<li class="list-inline-item">{{ group.name }}</li>
+								{% endfor %}
+							</ul>
+						</span>
+						<ul class="social mb-0 list-inline mt-3">
+							<li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+							<li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+							<li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		  <!-- End-->
+		</div>
+	  </div>
+	</div>
+	
+
+{% endblock %}

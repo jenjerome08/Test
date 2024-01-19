@@ -1,0 +1,31 @@
+{% load static %}
+
+<header class="p-3 bg-dark text-white sticky-top">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <image alt="Logo" width="60" height="60" class="d-inline-block align-text-top" src="{% static '/media/logo.png' %}" ></image>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        
+        <li><a href="{% url 'homePage' %}" class="nav-link px-2 text-white">Home</a></li>
+        <li><a href="{% url 'aboutPage' %}" class="nav-link px-2 text-secondary">About</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">Pricing</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">FAQs</a></li>
+
+      </ul>
+      
+      
+
+      <div class="text-end">
+        <button type="button" id="yow" class="btn btn-outline me-2">Sign-up</button>
+        <button type="button" class="btn btn-info">Login</button>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<div class="b-example-divider"></div>

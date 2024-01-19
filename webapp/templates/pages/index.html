@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jenjie</title>
+    <link rel="icon" type="image/x-icon" href="{% static '/media/icon.ico' %}">
+    
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load django_bootstrap5 %}
+    {# Load Bootstrap CSS and JavaScript #}
+
+
+    {# Load Bootstrap alerts #}
+    {% bootstrap_messages %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" />
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+</head>
+<body>
+
+{% include 'pages/navbar.html' %}
+{% block content %}
+
+{% endblock %}
+{% include 'pages/footer.html' %}
+
+<script src="{% static '/js/script.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</body>
+</html>

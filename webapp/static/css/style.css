@@ -1,0 +1,263 @@
+body {
+    background: rgb(21, 25, 29);
+}
+
+
+/* Navbar */
+.form-control-dark {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+  
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+  
+.text-small {
+    font-size: 85%;
+}
+  
+.dropdown-toggle {
+    outline: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(241, 238, 238, 0.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(21, 25, 29);
+    background-clip: border-box;
+    border: 0 solid rgba(7, 146, 104, 0.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: #101011;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.view {
+    height: 100%;
+}
+  
+#mobile-box {
+    width: 360px;
+}
+  
+.card {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+  
+.card .view {
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+  
+.card h5 a {
+    color: #0d47a1;
+}
+  
+.card h5 a:hover {
+    color: #072f6b;
+}
+  
+#pButton {
+    float: left;
+    color: black;
+}
+  
+#timeline {
+    width: 90%;
+    height: 2px;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3);
+}
+  
+#pButton {
+    margin-top: 12px;
+    cursor: pointer;
+}
+  
+#playhead {
+    width: 8px;
+    height: 8px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: -3px;
+    background: black;
+    cursor: pointer;
+}
+
+
+
+.breadcrumb-item.active a {
+    text-decoration: none;
+}
+
+.avatar.sm {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: .818125rem;
+}
+.table-nowrap .table td, .table-nowrap .table th {
+    white-space: nowrap;
+}
+.table>:not(caption)>*>* {
+    padding: 0.75rem 1.25rem;
+    border-bottom-width: 1px;
+}
+
+#total-orders{
+    background-color: #42afca;
+}
+#total-delivered{
+    background-color: #42afca;
+}
+#total-pending{
+    background-color: rgb(90, 207, 184);
+}
+
+
+#yow{
+    background-color:rgb(90, 207, 184);
+}
+
+
+
+
+/* profile */
+.account-settings .user-profile {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.account-settings .user-profile .user-avatar {
+    margin: 0 0 1rem 0;
+}
+.account-settings .user-profile .user-avatar img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+.account-settings .user-profile h5.user-name {
+    margin: 0 0 0.5rem 0;
+}
+
+.account-settings .about {
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+.account-settings .about h5 {
+    margin: 0 0 15px 0;
+    color: #f1f5f8;
+}
+.account-settings .about p {
+    font-size: 0.825rem;
+}
+
+
+
+
+
+/* demo */
